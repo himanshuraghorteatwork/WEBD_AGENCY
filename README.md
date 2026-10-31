@@ -46,3 +46,7 @@ Set `AI_API_KEY` on the server and optionally `AI_MODEL` (default gpt-4.1-mini).
 `npm test` starts an isolated server with a temporary database and exercises invalid/valid lead submission, unauthorized access, origin checks, login/logout, stored leads, editable pricing, invalid content, chat fallback and sitemap generation. It does not use production credentials or data. Chromium validation also exercised mobile menu, portfolio filtering and modal, chatbot, and end-to-end inquiry submission at 390/768/1440px without horizontal overflow or runtime errors.
 
 Respect reduced-motion preferences; animations and smooth scrolling are disabled and reveal content stays visible. Use the existing checkout for cloud tasks; do not create worktrees unless explicitly requested.
+
+## Motion and navigation
+
+`src/MotionEffects.tsx` provides a scroll progress indicator, active navigation, a back-to-top control, and decorative ambient layers. The background pause control remembers the visitor's preference locally; it never prevents interaction with page content. Ambient lighting and particles use CSS transforms and opacity, with fewer particles on mobile. Reduced-motion mode disables background animation, smooth scrolling, and entrance movement. The inquiry form displays named steps, focuses its heading after navigation, and animates transitions. FAQ answers expand smoothly. The existing design and backend are preserved.
